@@ -1,16 +1,13 @@
-#include "main.h"
+#ifndef HOLBERTON_H
+#define HOLBERTON_H
 
-/**
- * get_endianness - check endianness
- * Return: 0 if big endian, or 1 if little endian
- */
-int get_endianness(void)
-{
-	int num;
+int _putchar(char c);
+unsigned int binary_to_uint(const char *b);
+void print_binary(unsigned long int n);
+int get_bit(unsigned long int n, unsigned int index);
+int set_bit(unsigned long int *n, unsigned int index);
+int clear_bit(unsigned long int *n, unsigned int index);
+unsigned int flip_bits(unsigned long int n, unsigned long int m);
+int get_endianness(void);
 
-	num = 1;
-	if (*(char *)&num == 1)
-		return (1);
-	else
-		return (0);
-}
+#endif
